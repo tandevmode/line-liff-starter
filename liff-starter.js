@@ -26,19 +26,28 @@ function initializeApp(data) {
 
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
-        liff.getProfile().then(function (profile) {
-        liff.sendMessages([{
+         liff.getProfile().then(function (profile) {
+          liff.sendMessages([
+            {
             type: 'text',
-            text: "You've successfully sent a message!/n From:" + profile.displayName + "/nHooray!"
-        }, {
+            text: "You've successfully sent a message! Hooray!"
+            }, 
+            {
+              type: 'text',
+              text: 'From:' + profile.displayName
+            },  
+            {
             type: 'sticker',
             packageId: '2',
             stickerId: '144'
-        }]).then(function () {
+            }
+          ]).then(function () {
             liff.closeWindow();
+          }).catch(function (error) {
+            window.alert('Error sending message: ' + error.message);
+          });
         }).catch(function (error) {
-            window.alert("Error sending message: " + error);
-        });
+            window.alert("Error getting profile: " + error.message);
         });
     });
 
