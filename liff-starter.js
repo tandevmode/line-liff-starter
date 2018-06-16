@@ -28,13 +28,13 @@ function initializeApp(data) {
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
         liff.sendMessages([{
             type: 'text',
-            text: "You've successfully sent a message! Hooray!"
+            text: "You've successfully sent a message!/n From:" + profile.displayName + "/nHooray!"
         }, {
             type: 'sticker',
             packageId: '2',
             stickerId: '144'
         }]).then(function () {
-            window.alert("Message sent");
+            liff.closeWindow();
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
         });
