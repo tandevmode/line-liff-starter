@@ -26,6 +26,7 @@ function initializeApp(data) {
 
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
+        liff.getProfile().then(function (profile) {
         liff.sendMessages([{
             type: 'text',
             text: "You've successfully sent a message!/n From:" + profile.displayName + "/nHooray!"
@@ -37,6 +38,7 @@ function initializeApp(data) {
             liff.closeWindow();
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
+        });
         });
     });
 
