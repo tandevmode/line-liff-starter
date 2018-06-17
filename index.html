@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-light bg-light">
+          <span class="navbar-brand mb-0 h1">LIFF Showcase</span>
+    </nav>
     <div class="buttongroup">
         <div class="buttonrow">
             <button id="openwindowbutton" class="btn btn-primary">Open Window</button>
@@ -49,16 +52,13 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="toggleProfileData()">Close</button>
               </div>
             </div>
           </div>
         </div>
 
     <div id="liffdata">
-        <nav class="navbar navbar-dark bg-dark">
-          <span class="navbar-brand mb-0 h1">Navbar</span>
-        </nav>
         <h2>LIFF Data</h2>
         <table class="table table-striped">
             <tr>
