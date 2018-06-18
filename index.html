@@ -23,43 +23,28 @@
 
     <div id="profileinfo">
         <h2>Profile</h2>
-        <div class="modal fade" id="liffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Profile</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div id="profilepicturediv">
-                    </div>
-                    <table class="table">
-                        <tr>
-                            <th>userId</th>
-                            <td id="useridprofilefield"></td>
-                        </tr>
-                        <tr>
-                            <th>displayName</th>
-                            <td id="displaynamefield"></td>
-                        </tr>
-                        <tr>
-                            <th>statusMessage</th>
-                            <td id="statusmessagefield"></td>
-                        </tr>
-                    </table>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="toggleProfileData()">Close</button>
-              </div>
-            </div>
-          </div>
+        <a href="#" onclick="toggleProfileData()">Close Profile</a>
+        <div id="profilepicturediv">
         </div>
+        <table class="table table-dark">
+            <tr>
+                <th>userId</th>
+                <td id="useridprofilefield"></td>
+            </tr>
+            <tr>
+                <th>displayName</th>
+                <td id="displaynamefield"></td>
+            </tr>
+            <tr>
+                <th>statusMessage</th>
+                <td id="statusmessagefield"></td>
+            </tr>
+        </table>
+        </div>
+    </div>
 
     <div id="liffdata">
-        <h2>LIFF Data</h2>
+        <h4>LIFF Data</h4>
         <table class="table table-striped">
             <tr>
                 <th>language</th>
